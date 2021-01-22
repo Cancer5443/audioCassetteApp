@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.8107267, g: 0.7785475, b: 0.73113835, a: 1}
+  m_IndirectSpecularColor: {r: 0.8110466, g: 0.778403, b: 0.7317191, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1959,8 +1959,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 574428074}
-  audioClipA: {fileID: 8300000, guid: 3b999c67f44454458ab646f32d0547bf, type: 3}
-  audioClipB: {fileID: 8300000, guid: 84c4cab17d8874f899e25745c3c9916a, type: 3}
+  audioClipA: {fileID: 8300000, guid: e929a974b366542bdb3542e8b27e88de, type: 3}
+  audioClipB: {fileID: 8300000, guid: 2b336b61c58a04b0092bcd7c48d1d03c, type: 3}
   volumeNob: {fileID: 870981488}
   animatorHolder: {fileID: 586447282}
   cassetteScriptHolder: {fileID: 870981476}
