@@ -2253,7 +2253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c1c0539073b4bd7b9688adb8977b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 1000
+  rotateSpeed: 500
   gimbleX: {fileID: 586447278}
 --- !u!65 &586447281
 BoxCollider:
@@ -2566,8 +2566,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0ce26d8ec483c44288b0e09f3ded609d, type: 3}
-  - {fileID: 2100000, guid: f71d7d88847674aa1a0d6c3163e22982, type: 2}
+  - {fileID: 2100000, guid: 714410ea9934b4465aa78f4d2190fb2f, type: 2}
+  - {fileID: 2100000, guid: 714410ea9934b4465aa78f4d2190fb2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3269,7 +3269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d66a8f939e746ad8b8022a260e8e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 800
+  rotateSpeed: 100
   cassette: {fileID: 870981476}
   scriptHolder: {fileID: 574428074}
 --- !u!1 &870981490
