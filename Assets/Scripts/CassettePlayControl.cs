@@ -44,8 +44,8 @@ public class CassettePlayControl : MonoBehaviour
     {
         while (isPlaying == true)
         {
-            leftTapeHolder.transform.Rotate(new Vector3(0, 0, 360), 1f, Space.World);
-            rightTapeHolder.transform.Rotate(new Vector3(0, 0, 360), 1f, Space.World);
+            leftTapeHolder.transform.Rotate(new Vector3(0, 360, 0), 1f, Space.Self);
+            rightTapeHolder.transform.Rotate(new Vector3(0, 360, 0), 1f, Space.Self);
             yield return null;
         }
     }
@@ -53,8 +53,8 @@ public class CassettePlayControl : MonoBehaviour
     {
         while (ff == true)
         {
-            leftTapeHolder.transform.Rotate(new Vector3(0, 0, 360), 10f, Space.World);
-            rightTapeHolder.transform.Rotate(new Vector3(0, 0, 360), 10f, Space.World);
+            leftTapeHolder.transform.Rotate(new Vector3(0, 360, 0), 10f, Space.Self);
+            rightTapeHolder.transform.Rotate(new Vector3(0, 360, 0), 10f, Space.Self);
             yield return null;
         }
     }
@@ -62,8 +62,8 @@ public class CassettePlayControl : MonoBehaviour
     {
         while (rew == true)
         {
-            leftTapeHolder.transform.Rotate(new Vector3(0, 0, -360), 10f, Space.World);
-            rightTapeHolder.transform.Rotate(new Vector3(0, 0, -360), 10f, Space.World);
+            leftTapeHolder.transform.Rotate(new Vector3(0, -360, 0), 10f, Space.Self);
+            rightTapeHolder.transform.Rotate(new Vector3(0, -360, 0), 10f, Space.Self);
             yield return null;
         }
     }

@@ -15,6 +15,8 @@ public class AudioControl : MonoBehaviour
     private float rewind = -4;
     private float normal = 1;
     private bool ejected = true;
+    private bool rewBool = false;
+    private bool ffBool = false;
 
     private float audioClipTime = 0;
     private float clipATime;
@@ -71,11 +73,17 @@ public class AudioControl : MonoBehaviour
                 control.Play();
                 animatorHolder.SetTrigger("Play");
                 cassetteScriptHolder.GetComponent<CassettePlayControl>().Play();
+                rewBool = false;
+                ffBool = false;
             }
         }
-        else
+        if (control.isPlaying == true && (ffBool == true || rewBool == true))
         {
-
+            cassetteScriptHolder.GetComponent<CassettePlayControl>().Pause();
+            animatorHolder.SetTrigger("Play");
+            cassetteScriptHolder.GetComponent<CassettePlayControl>().Play();
+            rewBool = false;
+            ffBool = false;
         }
     }
 
@@ -89,6 +97,8 @@ public class AudioControl : MonoBehaviour
                 control.Pause();
                 animatorHolder.SetTrigger("Pause");
                 cassetteScriptHolder.GetComponent<CassettePlayControl>().Pause();
+                rewBool = false;
+                ffBool = false;
             }
         }
         else
@@ -135,18 +145,22 @@ public class AudioControl : MonoBehaviour
     {
         if (ejected == false)
         {
-            if (control.isPlaying == true)
+            if (control.isPlaying == true && ffBool == false)
             {
                 control.pitch = fastforward;
                 animatorHolder.SetTrigger("FF");
                 cassetteScriptHolder.GetComponent<CassettePlayControl>().FF();
+                rewBool = false;
+                ffBool = true;
             }
-            else if (control.isPlaying == false)
+            else if (control.isPlaying == false && ffBool == false)
             {
                 control.Play();
                 control.pitch = fastforward;
                 animatorHolder.SetTrigger("FF");
                 cassetteScriptHolder.GetComponent<CassettePlayControl>().FF();
+                rewBool = false;
+                ffBool = true;
             }
         }
     }
@@ -155,18 +169,22 @@ public class AudioControl : MonoBehaviour
     {
         if (ejected == false)
         {
-            if (control.isPlaying == true)
+            if (control.isPlaying == true && rewBool == false)
             {
                 control.pitch = rewind;
                 animatorHolder.SetTrigger("Rew");
                 cassetteScriptHolder.GetComponent<CassettePlayControl>().Rew();
+                rewBool = true;
+                ffBool = false;
             }
-            else if (control.isPlaying == false)
+            else if (control.isPlaying == false && rewBool == false)
             {
                 control.Play();
                 control.pitch = rewind;
                 animatorHolder.SetTrigger("Rew");
                 cassetteScriptHolder.GetComponent<CassettePlayControl>().Rew();
+                rewBool = true;
+                ffBool = false;
             }
         }
     }
@@ -190,6 +208,8 @@ public class AudioControl : MonoBehaviour
             ejected = true;
             animatorHolder.SetTrigger("Eject");
             cassetteScriptHolder.GetComponent<CassettePlayControl>().Pause();
+            rewBool = false;
+            ffBool = false;
         }
     }
 
@@ -200,6 +220,8 @@ public class AudioControl : MonoBehaviour
             PauseAudio();
             ejected = false;
             animatorHolder.SetTrigger("Insert");
+            rewBool = false;
+            ffBool = false;
         }
     }
 
@@ -210,6 +232,8 @@ public class AudioControl : MonoBehaviour
         if (control.isPlaying == true)
         {
             control.Pause();
+            rewBool = false;
+            ffBool = false;
         }
     }
 }

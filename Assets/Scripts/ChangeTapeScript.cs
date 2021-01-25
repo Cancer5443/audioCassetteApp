@@ -38,7 +38,6 @@ public class ChangeTapeScript : MonoBehaviour
             scriptHolder.GetComponent<AudioControl>().SetAudioSourceA();
             Debug.Log("Setto A");
         }
-
         if (isDraging == false)
         {
             scriptHolder.GetComponent<AudioControl>().Insert();
