@@ -7,6 +7,7 @@ public class ChangeTapeScript : MonoBehaviour
     public float rotateSpeed;
     public GameObject cassette;
     private float rotateZ;
+    private float dragamount;
     private bool isDraging = false;
     private Vector3 aSitePossition = new Vector3(270f, 0f, 0f);
     private Vector3 bSitePossition = new Vector3(270f, 180f, 0f);
@@ -14,9 +15,17 @@ public class ChangeTapeScript : MonoBehaviour
     private float cassetteY;
     public GameObject scriptHolder;
 
+    private void Update()
+    {
+        dragamount = Input.GetAxis("Mouse X");
+        if (dragamount > 0.5f || dragamount < -0.5f)
+        {
+            isDraging = true;
+        }
+    }
+
     private void OnMouseDrag()
     {
-        isDraging = true;
         rotateZ = Input.GetAxis("Mouse X") * rotateSpeed * Mathf.Deg2Rad;
 
         cassette.transform.Rotate(Vector3.back, rotateZ);
@@ -26,24 +35,27 @@ public class ChangeTapeScript : MonoBehaviour
     private void OnMouseUp()
     {
         cassetteY = cassette.transform.eulerAngles.y;
-        if (cassetteY >= 90f && cassetteY <= 270f)
+        if (isDraging == true)
         {
-            StartCoroutine("SetPositionB");
-            scriptHolder.GetComponent<AudioControl>().SetAudioSourceB();
-            Debug.Log("Set to B");
+            if (cassetteY >= 90f && cassetteY <= 270f)
+            {
+                StartCoroutine("SetPositionB");
+                scriptHolder.GetComponent<AudioControl>().SetAudioSourceB();
+                Debug.Log("Set to B");
+            }
+            else
+            {
+                StartCoroutine("SetPositionA");
+                scriptHolder.GetComponent<AudioControl>().SetAudioSourceA();
+                Debug.Log("Setto A");
+            }
+            isDraging = false;
         }
         else
-        {
-            StartCoroutine("SetPositionA");
-            scriptHolder.GetComponent<AudioControl>().SetAudioSourceA();
-            Debug.Log("Setto A");
-        }
-        if (isDraging == false)
         {
             scriptHolder.GetComponent<AudioControl>().Insert();
         }
         isDraging = false;
-        Debug.Log(currentPosition);
     }
 
     private IEnumerator SetPositionA()
