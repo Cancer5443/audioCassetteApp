@@ -7,17 +7,36 @@ using UnityEngine.SceneManagement;
 public class VideoPlayScript : MonoBehaviour
 {
     public VideoPlayer vid;
+    private bool videoLoop = false;
 
 
     void Start()
     {
         vid.Play();
-        vid.loopPointReached += CheckOver;
+        StartCoroutine(LoadScene());
     }
 
     void CheckOver(UnityEngine.Video.VideoPlayer vp)
     {
-        print("Video Is Over");
-        SceneManager.LoadScene("MainScene");
+        videoLoop = true;
+    }
+
+    IEnumerator LoadScene()
+    {
+        yield return null;
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("MainScene");
+        asyncOperation.allowSceneActivation = false;
+        while (!asyncOperation.isDone)
+        {
+            vid.Play();
+            vid.loopPointReached += CheckOver;
+
+            if (asyncOperation.progress >= 0.9f && videoLoop == true)
+            {
+                    asyncOperation.allowSceneActivation = true;
+            }
+
+            yield return null;
+        }
     }
 }

@@ -8,6 +8,7 @@ public class ChangeTapeScript : MonoBehaviour
     public GameObject cassette;
     private float rotateZ;
     private float dragamount;
+    public float dragIgnoreAmount = 0.5f;
     private bool isDraging = false;
     private Vector3 aSitePossition = new Vector3(270f, 0f, 0f);
     private Vector3 bSitePossition = new Vector3(270f, 180f, 0f);
@@ -18,7 +19,7 @@ public class ChangeTapeScript : MonoBehaviour
     private void Update()
     {
         dragamount = Input.GetAxis("Mouse X");
-        if (dragamount > 0.5f || dragamount < -0.5f)
+        if (dragamount > dragIgnoreAmount || dragamount < -(dragIgnoreAmount))
         {
             isDraging = true;
         }

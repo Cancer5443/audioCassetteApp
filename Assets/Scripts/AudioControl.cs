@@ -11,8 +11,8 @@ public class AudioControl : MonoBehaviour
     public AudioClip audioClipA;
     public AudioClip audioClipB;
     private AudioSource control;
-    private float fastforward = 4;
-    private float rewind = -4;
+    public float fastforward = 6;
+    public float rewind = -6;
     private float normal = 1;
     private bool ejected = true;
     private bool rewBool = false;

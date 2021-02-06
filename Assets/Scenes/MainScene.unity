@@ -1961,6 +1961,8 @@ MonoBehaviour:
   audioSource: {fileID: 574428074}
   audioClipA: {fileID: 8300000, guid: e929a974b366542bdb3542e8b27e88de, type: 3}
   audioClipB: {fileID: 8300000, guid: 2b336b61c58a04b0092bcd7c48d1d03c, type: 3}
+  fastforward: 6
+  rewind: -6
   volumeNob: {fileID: 870981488}
   animatorHolder: {fileID: 586447282}
   cassetteScriptHolder: {fileID: 870981476}
@@ -3225,6 +3227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateSpeed: 100
   cassette: {fileID: 870981476}
+  dragIgnoreAmount: 1
   scriptHolder: {fileID: 574428074}
 --- !u!65 &870981486
 BoxCollider:
@@ -4167,6 +4170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateSpeed: 100
   cassette: {fileID: 870981476}
+  dragIgnoreAmount: 0.5
   scriptHolder: {fileID: 574428074}
 --- !u!1 &1180325281
 GameObject:
