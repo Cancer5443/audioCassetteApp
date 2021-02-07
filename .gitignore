@@ -58,7 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-Assets/Audio/VenčekReblovihTapeA.wav
+*.wav
 Assets/Audio/VenčekReblovihTapeA.wav.meta
-Assets/Audio/VenčekReblovihTapeB.wav
 Assets/Audio/VenčekReblovihTapeB.wav.meta

@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: 0ce26d8ec483c44288b0e09f3ded609d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Door
+    100002: eject
+    100004: ff
+    100006: //RootNode
+    100008: kaseta
+    100010: NosilecTraka.D
+    100012: NosilecTraka.L
+    100014: pause
+    100016: play
+    100018: Player
+    100020: rewind
+    100022: Trak.D
+    100024: Trak.L
+    100026: TrakBottom
+    100028: volume
+    100030: Cube
+    100032: LRot
+    100034: RRot
+    400000: Door
+    400002: eject
+    400004: ff
+    400006: //RootNode
+    400008: kaseta
+    400010: NosilecTraka.D
+    400012: NosilecTraka.L
+    400014: pause
+    400016: play
+    400018: Player
+    400020: rewind
+    400022: Trak.D
+    400024: Trak.L
+    400026: TrakBottom
+    400028: volume
+    400030: Cube
+    400032: LRot
+    400034: RRot
+    2100000: Textura
+    2100002: Okno
+    2100004: belaPlastika
+    2100006: Trak
+    2100008: walkmanBack
+    2100010: WalkmanFront
+    2300000: Door
+    2300002: eject
+    2300004: ff
+    2300006: kaseta
+    2300008: NosilecTraka.D
+    2300010: NosilecTraka.L
+    2300012: pause
+    2300014: play
+    2300016: Player
+    2300018: rewind
+    2300020: Trak.D
+    2300022: Trak.L
+    2300024: TrakBottom
+    2300026: volume
+    2300028: Cube
+    2300030: LRot
+    2300032: RRot
+    3300000: Door
+    3300002: eject
+    3300004: ff
+    3300006: kaseta
+    3300008: NosilecTraka.D
+    3300010: NosilecTraka.L
+    3300012: pause
+    3300014: play
+    3300016: Player
+    3300018: rewind
+    3300020: Trak.D
+    3300022: Trak.L
+    3300024: TrakBottom
+    3300026: volume
+    3300028: Cube
+    3300030: LRot
+    3300032: RRot
+    4300000: kaseta
+    4300002: NosilecTraka.D
+    4300004: Trak.L
+    4300006: Trak.D
+    4300008: NosilecTraka.L
+    4300010: TrakBottom
+    4300012: Player
+    4300014: Door
+    4300016: volume
+    4300018: eject
+    4300020: rewind
+    4300022: play
+    4300024: pause
+    4300026: ff
+    4300028: Cube
+    4300030: LRot
+    4300032: RRot
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
