@@ -3227,7 +3227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateSpeed: 100
   cassette: {fileID: 870981476}
-  dragIgnoreAmount: 1
+  dragIgnoreAmount: 5
   scriptHolder: {fileID: 574428074}
 --- !u!65 &870981486
 BoxCollider:
